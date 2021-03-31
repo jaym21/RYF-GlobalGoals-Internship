@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "695199492268",
+    "firebase_url": "https://ryf-global-goals-quiz-default-rtdb.firebaseio.com",
+    "project_id": "ryf-global-goals-quiz",
+    "storage_bucket": "ryf-global-goals-quiz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:695199492268:android:b36b782467f23083f09709",
+        "android_client_info": {
+          "package_name": "com.ofy.sdgquizapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "695199492268-s76tgfd9cmqpgk7rhiuq5evnis5k4ggj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ofy.sdgquizapp",
+            "certificate_hash": "37eeef2d1ea27853a063e97754b3bb985e5b6726"
+          }
+        },
+        {
+          "client_id": "695199492268-njdtltjct1rtpnlauoki4phvrmbikru2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSqiW6axAtzEDeSh2QcWy7EWEl8FL3YlY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "695199492268-njdtltjct1rtpnlauoki4phvrmbikru2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bnHome"
+        android:title="Home"
+        android:icon="@drawable/ic_botnav_home"/>
+
+    <item
+        android:id="@+id/bnQuiz"
+        android:title="Quiz"
+        android:icon="@drawable/ic_botnav_quiz"/>
+
+    <item
+        android:id="@+id/bnLogin"
+        android:title="Login"
+        android:icon="@drawable/ic_login"/>
+
+</menu>

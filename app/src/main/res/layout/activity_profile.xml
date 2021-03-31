@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_black"
+    tools:context="com.ofy.sdgquizapp.activity.ProfileActivity">
+
+    <include layout="@layout/toolbar_layout" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        android:layout_marginTop="40dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/imgLayout"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_dp"
+                    android:layout_marginBottom="@dimen/margin_dp"
+                    android:background="@drawable/circle_bg"
+                    android:padding="2dp">
+
+                    <com.ofy.sdgquizapp.helper.CircleImageView
+                        android:id="@+id/imgProfile"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_margin="2dp" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        app:fabSize="mini"
+                        app:srcCompat="@drawable/ic_camera" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_dash_line"
+                    android:layerType="software" />
+
+                <LinearLayout
+                    android:id="@+id/edtNameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.5"
+                        app:srcCompat="@drawable/ic_person" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4">
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/name"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/poppins_regular"/>
+
+                        <EditText
+                            android:id="@+id/edtUserName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvName"
+                            android:background="@drawable/edit_text_bg"
+                            android:enabled="false"
+                            android:hint="@string/name"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColorHint="@color/white"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/default_text_size"
+                            android:padding="5dp"/>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/changeName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.5"
+                        app:srcCompat="@drawable/ic_edit" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/edtMobileLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.5"
+                        app:srcCompat="@drawable/ic_phone" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4">
+
+                        <TextView
+                            android:id="@+id/tvPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mobile"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/poppins_regular"/>
+
+                        <EditText
+                            android:id="@+id/edtMobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvPhone"
+                            android:background="@drawable/edit_text_bg"
+                            android:enabled="false"
+                            android:hint="@string/mobile"
+                            android:inputType="phone"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="@dimen/default_text_size"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:padding="5dp"/>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/changeNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.5"
+                        app:srcCompat="@drawable/ic_edit" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        app:srcCompat="@drawable/ic_email" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4">
+
+                        <TextView
+                            android:id="@+id/tvEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/email"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tvEmailId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvEmail"
+                            android:layout_marginTop="@dimen/margin_10dp"
+                            android:layout_marginBottom="@dimen/margin_10dp"
+                            android:text="@string/email"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/default_text_size"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnUpdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Update Profile"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    android:background="@color/colorPrimary"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:layout_marginBottom="5dp"/>
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tvUpdate"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:layout_margin="5dp"-->
+<!--                    android:background="@drawable/left_btn_bg"-->
+<!--                    android:paddingStart="@dimen/margin_dp"-->
+<!--                    android:paddingTop="5dp"-->
+<!--                    android:paddingEnd="@dimen/margin_dp"-->
+<!--                    android:paddingBottom="5dp"-->
+<!--                    android:text="@string/update_profile"-->
+<!--                    android:textColor="@color/bg_color"-->
+<!--                    android:textSize="@dimen/mid_text"-->
+<!--                    android:visibility="gone"-->
+<!--                    android:fontFamily="@font/poppins_regular"/>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            app:backgroundTint="#333333"
+                            app:elevation="1dp"
+                            app:fabSize="normal"
+                            app:srcCompat="@drawable/ic_profile_statistics"
+                            android:onClick="UserStatistics"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Statistics"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:layout_marginTop="5dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            app:backgroundTint="#333333"
+                            app:elevation="1dp"
+                            app:fabSize="normal"
+                            app:srcCompat="@drawable/ic_profile_leaderboard"
+                            android:onClick="LeaderBoard"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Leaderboard"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:layout_marginTop="5dp"/>
+
+                    </LinearLayout>
+                    
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            app:backgroundTint="#333333"
+                            app:elevation="1dp"
+                            app:fabSize="normal"
+                            app:srcCompat="@drawable/ic_profile_bookmark"
+                            android:onClick="Bookmarks"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bookmarks"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:layout_marginTop="5dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            app:backgroundTint="#333333"
+                            app:elevation="1dp"
+                            app:fabSize="normal"
+                            app:srcCompat="@drawable/ic_profile_giftcard"
+                            android:onClick="InviteFriend"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Invite Friends"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:layout_marginTop="5dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="2">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:gravity="center"-->
+<!--                        android:onClick="UserStatistics"-->
+<!--                        android:padding="@dimen/margin_dp"-->
+<!--                        android:text="@string/statistics"-->
+<!--                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:fontFamily="@font/poppins_regular"/>-->
+
+<!--                    <View-->
+<!--                        android:layout_width="1.5dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:background="#0fbbbdcb" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:gravity="center"-->
+<!--                        android:onClick="LeaderBoard"-->
+<!--                        android:padding="@dimen/margin_dp"-->
+<!--                        android:text="@string/leaderboard"-->
+<!--                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:fontFamily="@font/poppins_regular"/>-->
+<!--                </LinearLayout>-->
+
+<!--                <View-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="1.5dp"-->
+<!--                    android:background="#0fbbbdcb" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="2">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:gravity="center"-->
+<!--                        android:onClick="Bookmarks"-->
+<!--                        android:padding="@dimen/margin_dp"-->
+<!--                        android:text="@string/bookmarks"-->
+<!--                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:fontFamily="@font/poppins_regular"/>-->
+
+<!--                    <View-->
+<!--                        android:layout_width="1.5dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:background="#0fbbbdcb" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:gravity="center"-->
+<!--                        android:onClick="InviteFriend"-->
+<!--                        android:padding="@dimen/margin_dp"-->
+<!--                        android:text="@string/invite_frnd"-->
+<!--                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:fontFamily="@font/poppins_regular"/>-->
+<!--                </LinearLayout>-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:onClick="Logout"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawablePadding="@dimen/margin_10dp"
+                    android:padding="@dimen/margin_dp"
+                    android:text="@string/logout"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fontFamily="@font/poppins_bold" />
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:srcCompat="@drawable/ic_profile_logout"/>-->
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_nav"
+        android:background="@drawable/bottom_nav"
+        app:itemIconTint="@drawable/bottom_nav_foreground"
+        app:itemTextColor="@drawable/bottom_nav_foreground"
+        app:labelVisibilityMode="labeled"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

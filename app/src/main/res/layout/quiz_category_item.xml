@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cat_layout"
+    android:layout_width="180dp"
+    android:layout_height="180dp"
+    android:gravity="center"
+    app:cardElevation="2dp">
+
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivCategoryImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"/>
+
+</androidx.cardview.widget.CardView>

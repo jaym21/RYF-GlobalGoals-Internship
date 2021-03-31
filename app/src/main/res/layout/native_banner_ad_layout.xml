@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.ads.formats.UnifiedNativeAdView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.gms.ads.formats.MediaView
+            android:id="@+id/native_banner_media"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@+id/ad_attrib_text"
+            app:layout_constraintTop_toBottomOf="@+id/ad_attrib_text"
+            tools:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/native_banner_headline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/native_banner_media"
+            app:layout_constraintTop_toTopOf="@+id/native_banner_media"
+            tools:text="Ad Headline" />
+
+        <TextView
+            android:id="@+id/ad_attrib_text"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="Ad"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RatingBar
+            android:id="@+id/native_banner_ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:isIndicator="true"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/native_banner_calltoaction_btn"
+            app:layout_constraintStart_toEndOf="@+id/native_banner_adv_name" />
+
+        <Button
+            android:id="@+id/native_banner_calltoaction_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_transparent_bg_rec"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="@+id/native_banner_media"
+            app:layout_constraintStart_toStartOf="@+id/native_banner_adv_name"
+            app:layout_constraintTop_toBottomOf="@+id/native_banner_adv_name"
+            app:layout_goneMarginStart="0dp"
+            tools:text="visit" />
+
+        <TextView
+            android:id="@+id/native_banner_adv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="TextView"
+            android:textSize="14sp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/native_banner_headline"
+            app:layout_constraintStart_toStartOf="@id/native_banner_headline"
+            tools:layout_editor_absoluteX="85dp"
+            tools:text="Advertiser Name" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.gms.ads.formats.UnifiedNativeAdView>
